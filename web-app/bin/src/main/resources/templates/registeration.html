@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+<title>Registration</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+
+				<form th:action="@{/registeration}" method="post">
+					<h1 >Register ...</h1>
+					  <hr class="my-20">
+					<div class="form-group">
+
+						<label for="username"></label>Username<input type="text"
+							id="username" size="3" name="username" class="form-control"
+							th:field="${user.username}" autofocus="autofocus"
+							placeholder="Username" />
+					</div>
+
+					<div class="form-group">
+						<label for="user"></label>Name<input type="text" id="name"
+							name="name" class="form-control" th:field="${user.name}"
+							autofocus="autofocus" placeholder="Your Name" />
+					</div>
+
+					<div class="form-group">
+						<label for="email"></label>Email<input type="email" id="email"
+							name="email" class="form-control" th:field="${user.email}"
+							autofocus="autofocus" placeholder="Your Email" />
+					</div>
+
+					<div class="form-group">
+						<label for="password">Password</label><input type="text"
+							id="password" name="password" class="form-control"
+							th:field="${user.password}" autofocus="autofocus"
+							placeholder="Your Password" />
+					</div>
+
+					<div class="form-group">
+						<label for="confirmPassword">Confirm Your Password</label> <input
+							type="text" id="confirmPassword" name="confirmPassword"
+							class="form-control" autofocus="autofocus"
+							placeholder="Confirm Your Password" />
+					</div>
+
+					<button type="submit" class="btn btn-info">Create Account</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+<body />
