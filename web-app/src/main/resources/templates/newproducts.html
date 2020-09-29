@@ -7,46 +7,12 @@
 	crossorigin="anonymous">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<link rel="stylesheet" type="text/css"
-	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
-
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#back").click(function() {
-			window.loacation.herf = '/dashboard';
-		});
-	});
-</script>
-
 
 <title>Products Page</title>
 </head>
-<body>
-	<div class="container" style="width: 30rem;">
-		<div class="card" style="margin-top: 1.5em">
-			<div class="card-header">
-				<h1>Products</h1>
-			</div>
-			<div class="card-body"></div>
-
-			<form th:action="@{/products}" method="post">
-				<button type="submit" class="btn btn-primary" id="product">
-					NewProduct</button>
-			</form>
-			<from>
-			<div th:text="| is this product publishied ? ${Products.Published}|">
-				here</div>
-			</from>
-			<form th:action="@{/dashboard}" method="Get">
-				<button id="back" class="btn btn-lg btn-primary ">Back</button>
-			</form>
-
-		</div>
-	</div>
+<body th:if="${product} != null ">
+	<div th:text="|Is product published : ${product.Published}|">div context</div>
+	
 
 </body>
 </html>

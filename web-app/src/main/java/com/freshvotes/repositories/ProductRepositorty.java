@@ -8,6 +8,7 @@ import com.freshvotes.domain.Products;
 @Repository
 public interface ProductRepositorty extends JpaRepository<Products, Integer> {
 
+
 	
 
 }

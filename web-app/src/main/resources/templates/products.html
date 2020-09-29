@@ -24,6 +24,7 @@
 			</div>
 			<div class="card-body"></div>
 			<form th:action="@{/products}" method="post">
+			<input type = "hidden" th:field="${product.id}"/>
 
 				<div class="form-group">
 					<label for="productname"></label>Product Name<input type="text"
